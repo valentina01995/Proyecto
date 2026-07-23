@@ -1,0 +1,384 @@
+/* =========================================
+   COLORES Y CONFIGURACIÓN GENERAL
+========================================= */
+
+:root {
+    --verde-oscuro: #132a22;
+    --verde-medio: #24483b;
+    --verde-claro: #3c6654;
+    --dorado: #c6a15b;
+    --dorado-claro: #e0c48d;
+    --crema: #f7f1e7;
+    --beige: #e8ddca;
+    --blanco: #ffffff;
+    --texto-oscuro: #202823;
+    --texto-suave: #5f6962;
+    --sombra: 0 12px 30px rgba(19, 42, 34, 0.15);
+}
+
+/* Elimina márgenes predeterminados */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Desplazamiento suave al hacer clic en el menú */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Cuerpo general de la página */
+
+body {
+    background-color: var(--crema);
+    color: var(--texto-oscuro);
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.7;
+}
+
+/* =========================================
+   ENCABEZADO
+========================================= */
+
+header {
+    align-items: center;
+    background-color: var(--verde-oscuro);
+    border-bottom: 3px solid var(--dorado);
+    display: flex;
+    justify-content: space-between;
+    padding: 18px 8%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Logo */
+
+header img {
+    height: 75px;
+    object-fit: contain;
+    width: auto;
+}
+
+/* Menú de navegación */
+
+nav ul {
+    align-items: center;
+    display: flex;
+    gap: 15px;
+    list-style: none;
+}
+
+nav a {
+    border-radius: 5px;
+    color: var(--blanco);
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 10px 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    background-color: var(--dorado);
+    color: var(--verde-oscuro);
+    transform: translateY(-2px);
+}
+
+/* =========================================
+   CONTENIDO PRINCIPAL
+========================================= */
+
+main {
+    margin: auto;
+    max-width: 1200px;
+}
+
+/* Título principal */
+
+h1 {
+    align-items: center;
+    background:
+        linear-gradient(
+            rgba(19, 42, 34, 0.82),
+            rgba(19, 42, 34, 0.82)
+        ),
+        url("https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1600&q=85")
+        center / cover no-repeat;
+    color: var(--blanco);
+    display: flex;
+    font-size: clamp(2.4rem, 6vw, 4.8rem);
+    justify-content: center;
+    line-height: 1.15;
+    min-height: 580px;
+    padding: 80px 10%;
+    position: relative;
+    text-align: center;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Línea decorativa debajo del título */
+
+h1::after {
+    background-color: var(--dorado);
+    bottom: 120px;
+    content: "";
+    height: 4px;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 100px;
+}
+
+/* =========================================
+   SECCIONES
+========================================= */
+
+section {
+    padding: 90px 8%;
+}
+
+/* Alterna los colores de las secciones */
+
+section:nth-of-type(odd) {
+    background-color: var(--blanco);
+}
+
+section:nth-of-type(even) {
+    background-color: var(--beige);
+}
+
+/* Títulos secundarios */
+
+h2 {
+    color: var(--verde-oscuro);
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.2;
+    margin-bottom: 25px;
+    position: relative;
+    text-align: center;
+}
+
+/* Línea decorativa en los h2 */
+
+h2::after {
+    background-color: var(--dorado);
+    content: "";
+    display: block;
+    height: 3px;
+    margin: 18px auto 0;
+    width: 70px;
+}
+
+/* Párrafos directos dentro de las secciones */
+
+section > p {
+    color: var(--texto-suave);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    margin: 0 auto 45px;
+    max-width: 850px;
+    text-align: center;
+}
+
+/* =========================================
+   TARJETAS
+========================================= */
+
+article {
+    background-color: var(--blanco);
+    border-left: 5px solid var(--dorado);
+    border-radius: 10px;
+    box-shadow: var(--sombra);
+    margin: 30px auto;
+    max-width: 850px;
+    padding: 35px;
+    transition: 0.3s ease;
+}
+
+article:hover {
+    box-shadow: 0 18px 40px rgba(19, 42, 34, 0.22);
+    transform: translateY(-6px);
+}
+
+/* Títulos de las tarjetas */
+
+h3 {
+    color: var(--verde-medio);
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+/* Párrafos de las tarjetas */
+
+article p {
+    color: var(--texto-suave);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+/* =========================================
+   SECCIÓN EXPERIENCIA
+========================================= */
+
+#experiencia {
+    background:
+        linear-gradient(
+            rgba(255, 255, 255, 0.94),
+            rgba(255, 255, 255, 0.94)
+        ),
+        url("https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&w=1500&q=80")
+        center / cover no-repeat;
+}
+
+/* =========================================
+   SECCIÓN MENÚ
+========================================= */
+
+#menu {
+    background-color: var(--verde-oscuro);
+    color: var(--blanco);
+}
+
+#menu h2 {
+    color: var(--blanco);
+}
+
+#menu > p {
+    color: var(--dorado-claro);
+}
+
+#menu article {
+    background-color: var(--crema);
+}
+
+#menu article h3 {
+    color: var(--verde-oscuro);
+}
+
+/* =========================================
+   PIE DE PÁGINA
+========================================= */
+
+footer {
+    background-color: #0b1c16;
+    border-top: 3px solid var(--dorado);
+    color: var(--blanco);
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 45px 20px;
+    text-align: center;
+}
+
+footer p {
+    color: #d7ddd9;
+    font-size: 14px;
+    margin: 8px 0;
+}
+
+footer p:first-child {
+    color: var(--dorado-claro);
+    font-size: 17px;
+    font-weight: bold;
+}
+
+/* =========================================
+   SELECCIÓN DE TEXTO
+========================================= */
+
+::selection {
+    background-color: var(--dorado);
+    color: var(--verde-oscuro);
+}
+
+/* =========================================
+   DISEÑO PARA TABLETAS
+========================================= */
+
+@media screen and (max-width: 850px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 5%;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    h1 {
+        min-height: 480px;
+        padding: 70px 7%;
+    }
+
+    h1::after {
+        bottom: 85px;
+    }
+
+    section {
+        padding: 70px 6%;
+    }
+}
+
+/* =========================================
+   DISEÑO PARA CELULARES
+========================================= */
+
+@media screen and (max-width: 550px) {
+
+    header {
+        position: relative;
+    }
+
+    header img {
+        height: 60px;
+    }
+
+    nav ul {
+        gap: 5px;
+    }
+
+    nav a {
+        font-size: 11px;
+        padding: 8px 10px;
+    }
+
+    h1 {
+        font-size: 2.6rem;
+        min-height: 450px;
+        padding: 60px 25px;
+    }
+
+    h1::after {
+        bottom: 65px;
+    }
+
+    section {
+        padding: 55px 22px;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    article {
+        padding: 25px 20px;
+    }
+
+    section > p,
+    article p {
+        font-size: 15px;
+    }
+}
